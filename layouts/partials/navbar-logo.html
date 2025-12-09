@@ -1,0 +1,7 @@
+{{- $logo := .Site.Params.ui.navbar_logo_path | default "/images/logo-warm-light.svg" -}}
+<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+  <span class="navbar-logo">
+    <img src="{{ $logo | relURL }}" alt="{{ .Site.Title }}" style="height: 40px;">
+  </span>
+  <span class="navbar-brand__name">{{ .Site.Title }}</span>
+</a>

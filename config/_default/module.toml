@@ -1,0 +1,26 @@
+[[imports]]
+  path = "github.com/google/docsy"
+  disable = false
+
+# Mount website's own content (required)
+[[mounts]]
+  source = "content"
+  target = "content"
+
+[[mounts]]
+  source = "static"
+  target = "static"
+
+[[mounts]]
+  source = "layouts"
+  target = "layouts"
+
+[[mounts]]
+  source = "assets"
+  target = "assets"
+
+# Project mounts will be added in later phases
+# Example (to be added in Phase 1):
+# [[mounts]]
+#   source = "../bindy/docs/hugo"
+#   target = "content/docs/bindy"

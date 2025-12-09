@@ -1,0 +1,21 @@
+baseURL = "https://firestoned.io/"
+title = "Firestoned"
+description = "API-driven DNS infrastructure management"
+enableRobotsTXT = true
+enableGitInfo = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

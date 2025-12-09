@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{ hugo.Generator }}
+
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+{{ $styles := resources.Get "scss/main.scss" | toCSS | minify }}
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet">
+
+<style>
+  body .td-navbar-cover {
+    background-color: #212529 !important;
+    background-image: none !important;
+    opacity: 1 !important;
+  }
+</style>
+
+{{ partial "hooks/head-end.html" . }}

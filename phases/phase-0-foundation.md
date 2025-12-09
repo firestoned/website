@@ -441,6 +441,220 @@ Open browser to `http://localhost:1313/` and verify:
 
 ---
 
+### 11. Add Artwork Assets
+
+#### 11.1 Generate Artwork
+
+Use the artwork generation prompt (see README) to create:
+- Logo (SVG)
+- Favicon (SVG + PNG)
+- Hero background (optional)
+- Social preview image
+
+#### 11.2 Add Logo
+
+Save logo as `website/static/images/logo.svg` and update `params.toml`:
+
+```toml
+# Add to [ui] section
+[ui]
+  navbar_logo = true
+  navbar_logo_path = "/images/logo.svg"
+```
+
+#### 11.3 Add Favicon
+
+```bash
+# Save favicon files
+cp favicon.svg website/static/favicon.svg
+cp favicon-32x32.png website/static/favicon-32x32.png
+```
+
+Create `website/layouts/partials/favicons.html`:
+
+```html
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+```
+
+#### 11.4 Add Social Preview
+
+Save as `website/static/images/social-preview.png` and add to `params.toml`:
+
+```toml
+[params]
+  images = ["/images/social-preview.png"]
+```
+
+---
+
+### 12. Configure GitHub Pages Deployment
+
+#### 12.1 Create GitHub Actions Workflow
+
+Create `.github/workflows/docs.yaml`:
+
+```yaml
+name: Documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - '.github/workflows/docs.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.120.0"
+          extended: true
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.21"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install Node.js dependencies
+        run: |
+          cd website
+          npm ci
+
+      - name: Build Hugo site
+        run: |
+          cd website
+          hugo --minify --environment production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/public
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+#### 12.2 Add CNAME File (Optional - for custom domain)
+
+If using custom domain `firestoned.io`, create `website/static/CNAME`:
+
+```
+firestoned.io
+```
+
+Skip this if using GitHub Pages default URL (`username.github.io/firestoned`).
+
+#### 12.3 Update baseURL for GitHub Pages
+
+If NOT using custom domain, update `config/_default/config.toml`:
+
+```toml
+# For GitHub Pages at username.github.io/firestoned
+baseURL = "https://username.github.io/firestoned/"
+
+# OR for custom domain
+baseURL = "https://firestoned.io/"
+```
+
+---
+
+### 13. Deploy to GitHub Pages
+
+#### 13.1 Enable GitHub Pages
+
+1. Push changes to GitHub:
+   ```bash
+   git add .
+   git commit -m "Phase 0: Hugo site foundation with GitHub Pages"
+   git push origin main
+   ```
+
+2. Go to repository Settings → Pages
+3. Source: Select "GitHub Actions"
+4. Save
+
+#### 13.2 Trigger Deployment
+
+The workflow will automatically run on push. Monitor at:
+- GitHub Actions tab → "Documentation" workflow
+
+#### 13.3 Verify Deployment
+
+After workflow completes, visit:
+- GitHub Pages URL: `https://username.github.io/firestoned/`
+- OR custom domain: `https://firestoned.io/`
+
+Check:
+- [ ] Landing page loads
+- [ ] Logo appears in navbar
+- [ ] Navigation works
+- [ ] Project cards visible
+- [ ] No console errors
+
+---
+
+### 14. Configure Custom Domain (Optional)
+
+If using `firestoned.io`, add DNS records:
+
+**A Records:**
+```
+Type    Name    Value
+A       @       185.199.108.153
+A       @       185.199.109.153
+A       @       185.199.110.153
+A       @       185.199.111.153
+```
+
+**CNAME Record:**
+```
+Type    Name    Value
+CNAME   www     username.github.io
+```
+
+Then in GitHub Settings → Pages:
+- Custom domain: `firestoned.io`
+- Wait for DNS check to pass
+- Enable "Enforce HTTPS"
+
+---
+
 ## Success Criteria
 
 - [x] Hugo server runs without errors
@@ -451,6 +665,10 @@ Open browser to `http://localhost:1313/` and verify:
 - [x] Directory structure created
 - [x] Node.js dependencies installed
 - [x] .gitignore configured
+- [x] Logo and favicon added
+- [x] GitHub Actions workflow configured
+- [x] Site deployed to GitHub Pages
+- [x] Public URL accessible
 
 ---
 
@@ -462,6 +680,9 @@ Open browser to `http://localhost:1313/` and verify:
 4. ✅ Landing page with project overview
 5. ✅ Makefile for build automation
 6. ✅ Working local development environment
+7. ✅ Logo and branding assets
+8. ✅ GitHub Pages deployment
+9. ✅ Live website at public URL
 
 ---
 

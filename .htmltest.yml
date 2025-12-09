@@ -1,0 +1,22 @@
+# htmltest configuration for link validation
+DirectoryPath: "public"
+
+# Check external links but don't fail on them (they can be flaky)
+CheckExternal: true
+CheckExternalHash: false
+
+# Ignore some common external domains that rate limit
+IgnoreURLs:
+  - "https://github.com/firestoned"  # Will be checked manually
+  - "https://fonts.googleapis.com"
+  - "https://fonts.gstatic.com"
+
+# Ignore hash links to headings (Hugo handles these)
+IgnoreInternalEmptyHash: true
+
+# Don't fail on alt text (accessibility check, but not critical for testing)
+CheckImages: true
+IgnoreAltMissing: true
+
+# Log level
+LogLevel: 1  # 0=errors only, 1=normal, 2=verbose

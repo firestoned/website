@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestoned Artwork - Approved Assets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #ff6b35;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .preview-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+
+        .preview-light {
+            background: #ffffff;
+            padding: 30px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .preview-dark {
+            background: #1a1a1a;
+            padding: 30px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #ffffff;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .favicon-preview {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .favicon-box {
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .social-preview {
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .hero-preview {
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .description {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .file-path {
+            font-family: 'Courier New', monospace;
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .color-info {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .intro {
+            background: #f0f9ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Firestoned Approved Artwork</h1>
+
+        <div class="intro">
+            <p><strong>Status:</strong> All artwork assets approved and ready for Phase 0 implementation.</p>
+            <p><strong>Theme:</strong> Warm orange flame (fire/energy) + Kubernetes blue infrastructure + amber stone foundation</p>
+        </div>
+
+        <h2>Primary Logos <span class="status-badge">✓ APPROVED</span></h2>
+        <p class="description">Blue K8s hexagon with orange flame - light and dark versions for theme switching</p>
+
+        <div class="preview-section">
+            <h3>Light Background Version</h3>
+            <p class="file-path">static/images/logo-warm-light.svg</p>
+            <div class="preview-light logo-container">
+                <img src="static/images/logo-warm-light.svg" alt="Firestoned Logo Light" style="height: 50px;">
+            </div>
+
+            <h3>Dark Background Version</h3>
+            <p class="file-path">static/images/logo-warm-dark.svg</p>
+            <div class="preview-dark logo-container">
+                <img src="static/images/logo-warm-dark.svg" alt="Firestoned Logo Dark" style="height: 50px;">
+            </div>
+        </div>
+
+        <h2>Favicon <span class="status-badge">✓ APPROVED</span></h2>
+        <p class="file-path">static/favicon.svg</p>
+        <p class="description">Optimized for small sizes (16×16 to 64×64)</p>
+
+        <div class="preview-section">
+            <div class="favicon-preview">
+                <div class="favicon-box">
+                    <img src="static/favicon.svg" alt="Favicon" width="16" height="16">
+                    <div style="margin-top: 10px; font-size: 12px; color: #666;">16×16</div>
+                </div>
+                <div class="favicon-box">
+                    <img src="static/favicon.svg" alt="Favicon" width="32" height="32">
+                    <div style="margin-top: 10px; font-size: 12px; color: #666;">32×32</div>
+                </div>
+                <div class="favicon-box">
+                    <img src="static/favicon.svg" alt="Favicon" width="64" height="64">
+                    <div style="margin-top: 10px; font-size: 12px; color: #666;">64×64</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Hero Background <span class="status-badge">✓ APPROVED</span></h2>
+        <p class="file-path">static/images/hero-background.svg</p>
+        <p class="description">1920×1080 background with hexagonal mesh and warm orange energy lines</p>
+
+        <div class="preview-section">
+            <div class="hero-preview">
+                <img src="static/images/hero-background.svg" alt="Hero Background" style="width: 100%; height: auto;">
+            </div>
+        </div>
+
+        <h2>Social Preview Image <span class="status-badge">✓ APPROVED</span></h2>
+        <p class="file-path">static/images/social-preview-simple.svg</p>
+        <p class="description">1200×630 Open Graph / Twitter Card image with two-line tagline</p>
+
+        <div class="preview-section">
+            <div class="social-preview">
+                <img src="static/images/social-preview-simple.svg?v=2" alt="Social Preview" style="width: 100%; height: auto;">
+            </div>
+        </div>
+
+        <h2>Color Palette <span class="status-badge">✓ APPROVED</span></h2>
+
+        <div class="preview-section">
+            <h3>Primary Colors</h3>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #ff6b35;"></div>
+                <div class="color-info">
+                    <div class="color-name">Flame Orange</div>
+                    <div class="color-hex">#ff6b35</div>
+                    <div style="font-size: 12px; color: #666;">Fire/Energy</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #f7931e;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gold</div>
+                    <div class="color-hex">#f7931e</div>
+                    <div style="font-size: 12px; color: #666;">Warmth/Transition</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #d4a574;"></div>
+                <div class="color-info">
+                    <div class="color-name">Amber Stone</div>
+                    <div class="color-hex">#d4a574</div>
+                    <div style="font-size: 12px; color: #666;">Stone/Foundation</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #0066cc;"></div>
+                <div class="color-info">
+                    <div class="color-name">Kubernetes Blue</div>
+                    <div class="color-hex">#0066cc</div>
+                    <div style="font-size: 12px; color: #666;">Infrastructure/Technical</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Neutral Colors</h3>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #333333;"></div>
+                <div class="color-info">
+                    <div class="color-name">Dark Gray</div>
+                    <div class="color-hex">#333333</div>
+                    <div style="font-size: 12px; color: #666;">Text/Strokes (light mode)</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div class="color-swatch" style="background: #ffffff; border: 2px solid #333;"></div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#ffffff</div>
+                    <div style="font-size: 12px; color: #666;">Text/Strokes (dark mode)</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Original Inspiration</h2>
+        <p class="description">The existing Firestone logo that inspired the warm color palette</p>
+        <div class="preview-section">
+            <div class="preview-light" style="display: inline-block; padding: 20px;">
+                <img src="static/images/firestone-original.png" alt="Original Firestone Logo" style="width: 100px; height: 100px;">
+            </div>
+        </div>
+
+        <h2>Design Summary</h2>
+        <div class="preview-section">
+            <ul style="line-height: 1.8;">
+                <li><strong>Fire:</strong> Orange flame represents energy, API-driven power, and dynamic infrastructure</li>
+                <li><strong>Stone:</strong> Amber tones represent foundation, stability, and DNS bedrock</li>
+                <li><strong>Kubernetes:</strong> Blue hexagon with wheel spokes clearly signals K8s integration</li>
+                <li><strong>Modern:</strong> Rounded corners, gradients, and clean typography for contemporary feel</li>
+                <li><strong>Scalable:</strong> All SVG assets scale perfectly from favicon to billboard</li>
+            </ul>
+        </div>
+
+        <h2>Next Steps</h2>
+        <div class="preview-section">
+            <ol style="line-height: 1.8;">
+                <li>Proceed with Phase 0: Hugo site initialization</li>
+                <li>Configure Hugo to use logo-warm-light.svg as primary logo</li>
+                <li>Set up theme switching for logo-warm-dark.svg in dark mode</li>
+                <li>Add favicon.svg to site configuration</li>
+                <li>Use hero-background.svg on landing page</li>
+                <li>Configure social-preview-simple.svg for Open Graph meta tags</li>
+                <li>Apply color palette to site theme/CSS</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="hero-bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f2f5;stop-opacity:1" />
+    </linearGradient>
+
+    <pattern id="hex-mesh" x="0" y="0" width="50" height="86.6" patternUnits="userSpaceOnUse" viewBox="0 0 100 173.2">
+      <path d="M50 0 L100 28.85 L100 86.6 L50 115.45 L0 86.6 L0 28.85 Z" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.05"/>
+      <path d="M50 86.6 L100 115.45 L100 173.2 L50 202.05 L0 173.2 L0 115.45 Z" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#hero-bg-grad)"/>
+
+  <rect width="1920" height="1080" fill="url(#hex-mesh)"/>
+
+  <g opacity="0.15" stroke="#f7931e" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M-100 200 Q 400 500, 960 300 T 1920 600" />
+      <path d="M-100 800 Q 600 600, 1200 900 T 2020 700" />
+      <circle cx="960" cy="300" r="5" fill="#ff6b35" opacity="0.6"/>
+       <circle cx="1200" cy="900" r="5" fill="#ff6b35" opacity="0.6"/>
+  </g>
+</svg>

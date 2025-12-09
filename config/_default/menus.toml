@@ -1,0 +1,56 @@
+# Top navigation menu
+[[main]]
+  name = "Documentation"
+  weight = 10
+  url = "/docs/"
+
+[[main]]
+  name = "GitHub"
+  weight = 40
+  url = "https://github.com/firestoned"
+  pre = "<i class='fab fa-github'></i>"
+
+# Documentation sidebar menu structure
+# Note: Most menu items are auto-generated from content/_index.md files
+# Add manual entries here only for special cases or to organize the sidebar
+
+[[docs]]
+  name = "Getting Started"
+  weight = 1
+  url = "/docs/getting-started/"
+  identifier = "getting-started"
+
+[[docs]]
+  name = "Projects"
+  weight = 10
+  identifier = "projects"
+
+[[docs]]
+  name = "bindy"
+  weight = 11
+  url = "/docs/bindy/"
+  parent = "projects"
+
+[[docs]]
+  name = "bindcar"
+  weight = 12
+  url = "/docs/bindcar/"
+  parent = "projects"
+
+[[docs]]
+  name = "zonewarden"
+  weight = 13
+  url = "/docs/zonewarden/"
+  parent = "projects"
+
+[[docs]]
+  name = "firestone"
+  weight = 14
+  url = "/docs/firestone/"
+  parent = "projects"
+
+[[docs]]
+  name = "forevd"
+  weight = 15
+  url = "/docs/forevd/"
+  parent = "projects"

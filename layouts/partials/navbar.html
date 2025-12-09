@@ -1,0 +1,28 @@
+<nav class="td-navbar js-navbar-scroll td-navbar-cover" data-bs-theme=dark>
+  <div class="td-navbar-container container-fluid flex-column flex-md-row">
+    <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+      <span class="navbar-logo">
+        <img src="{{ .Site.Params.ui.navbar_logo_path | relURL }}" alt="{{ .Site.Title }}" style="height: 40px;">
+      </span>
+    </a>
+    <div class="td-navbar-nav-scroll td-navbar-nav-scroll--indicator" id="main_navbar">
+      <div class="scroll-indicator scroll-left"></div>
+      <ul class="navbar-nav">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .URL | relURL }}">
+            {{ with .Pre }} {{ . | safeHTML }} {{ end }}<span>{{ .Name }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      <div class="scroll-indicator scroll-right"></div>
+    </div>
+    <div class="d-none d-lg-block td-navbar__search">
+      <div class="td-search td-search--offline">
+        <div class="td-search__icon"></div>
+        <input type="search" class="td-search__input form-control" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off" data-offline-search-index-json-src="{{ "/offline-search-index.json" | relURL }}" data-offline-search-base-href="{{ "/" | relURL }}" data-offline-search-max-results="25">
+      </div>
+    </div>
+  </div>
+</nav>

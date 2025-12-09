@@ -1,0 +1,47 @@
+# Site colors (Firestoned branding)
+primary = "#ff6b35"       # Orange flame color (primary accent)
+secondary = "#1e3a5f"     # Deep navy blue (secondary) - darker, more sophisticated
+tertiary = "#333333"      # Dark gray
+
+# GitHub repo
+github_repo = "https://github.com/firestoned/firestoned"
+github_project_repo = "https://github.com/firestoned/firestoned"
+github_branch = "main"
+
+# Enable offline search
+offlineSearch = true
+offlineSearchMaxResults = 25
+
+# Diagrams
+[params.mermaid]
+  enable = true
+
+# Disable math rendering (KaTeX)
+[params.katex]
+  enable = false
+
+# Footer
+copyright = "The Firestoned Authors"
+privacy_policy = ""
+
+# User interface
+[ui]
+  navbar_logo_path = "images/logo-warm-dark.svg"
+  navbar_translucent_over_cover_disable = false
+  sidebar_menu_compact = true
+  sidebar_search_disable = false
+  breadcrumb_disable = false
+  sidebar_menu_foldable = true
+  sidebar_cache_limit = 10
+
+# Images for social media
+images = ["/images/social-preview.svg"]
+
+
+# Links (GitHub, etc.)
+[links]
+  [[links.user]]
+    name = "GitHub"
+    url = "https://github.com/firestoned"
+    icon = "fab fa-github"
+    desc = "Firestoned on GitHub"

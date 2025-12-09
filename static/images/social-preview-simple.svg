@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .fs-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        fill: #ffffff;
+      }
+      .fs-tagline {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        fill: #cccccc;
+      }
+    </style>
+    <linearGradient id="social-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#222222;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111111;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flame-grad-social" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7931e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff4500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#social-grad)"/>
+
+  <!-- Logo and text -->
+  <g transform="translate(100, 220)">
+      <g transform="scale(1.5)">
+        <g transform="translate(0, 0)">
+            <path d="M20 0L37.32 10V30L20 40L2.68 30V10L20 0Z"
+                  fill="none"
+                  stroke="#d4a574"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"/>
+            <path d="M20 33C20 33 26 27 26 19C26 13.5 22 11 20 6C18 11 14 13.5 14 19C14 27 20 33 20 33Z"
+                  fill="url(#flame-grad-social)"/>
+        </g>
+        <text x="50" y="30" font-size="24" class="fs-title" letter-spacing="-0.5">Firestoned</text>
+      </g>
+
+      <text x="10" y="120" font-size="36" class="fs-tagline">API-driven infrastructure</text>
+      <text x="10" y="165" font-size="36" class="fs-tagline">for Kubernetes</text>
+  </g>
+
+  <!-- Simplified network visualization - no filters -->
+  <g transform="translate(750, 315)" opacity="0.6">
+      <path d="M0 -60 L52 -30 V30 L0 60 L-52 30 V-30 Z"
+            fill="none"
+            stroke="#ff6b35"
+            stroke-width="3"/>
+      <circle cx="0" cy="0" r="12" fill="#f7931e"/>
+
+      <g stroke="#d4a574" stroke-width="2" fill="none" opacity="0.8">
+          <path d="M0 -60 L0 -150" />
+          <circle cx="0" cy="-150" r="6" fill="#f7931e"/>
+          <path d="M52 -30 L130 -75" />
+          <circle cx="130" cy="-75" r="6" fill="#f7931e"/>
+          <path d="M52 30 L130 75" />
+          <circle cx="130" cy="75" r="6" fill="#f7931e"/>
+          <path d="M0 60 L0 150" />
+          <circle cx="0" cy="150" r="6" fill="#f7931e"/>
+          <path d="M-52 30 L-130 75" />
+          <circle cx="-130" cy="75" r="6" fill="#f7931e"/>
+          <path d="M-52 -30 L-130 -75" />
+          <circle cx="-130" cy="-75" r="6" fill="#f7931e"/>
+      </g>
+  </g>
+</svg>
