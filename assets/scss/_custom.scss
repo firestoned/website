@@ -424,21 +424,27 @@ code:not(.hljs) {
 
     .display-1 {
         color: white !important;
-        font-weight: 900 !important; // Extra bold
-        font-size: 6rem !important; // Much larger
-        letter-spacing: -0.02em; // Tighter letter spacing
+        font-weight: 900 !important;
+        font-size: 3rem !important; // Mobile-friendly size
+        letter-spacing: -0.02em;
         text-shadow:
             3px 3px 10px rgba(0, 0, 0, 0.4),
-            0 0 30px rgba(255, 107, 53, 0.3); // Dramatic shadow with orange glow
+            0 0 30px rgba(255, 107, 53, 0.3);
         position: relative;
         z-index: 1;
         line-height: 1.1;
 
-        // Add extra impact on larger screens
+        // Small mobile devices
+        @media (min-width: 576px) {
+            font-size: 4rem !important;
+        }
+
+        // Tablets and up
         @media (min-width: 768px) {
             font-size: 7rem !important;
         }
 
+        // Large screens
         @media (min-width: 1200px) {
             font-size: 8rem !important;
         }
@@ -454,7 +460,7 @@ code:not(.hljs) {
 
     .lead, p {
         color: rgba(255, 255, 255, 0.95) !important;
-        font-size: 1.5rem;
+        font-size: 1.1rem; // Smaller on mobile
         font-weight: 400;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
         position: relative;
@@ -462,6 +468,11 @@ code:not(.hljs) {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+
+        // Larger text on bigger screens
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
     }
 
     // Ensure buttons have proper contrast

@@ -1,4 +1,4 @@
-baseURL = "https://firestoned.io/"
+baseURL = "https://firestoned.github.io/website/"
 title = "Firestoned"
 description = "API-driven DNS infrastructure management"
 enableRobotsTXT = true

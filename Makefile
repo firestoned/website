@@ -21,7 +21,7 @@ build: prepare-all ## Build Hugo site
 
 serve: prepare-all ## Serve Hugo site locally
 	@echo "Starting Hugo server..."
-	@export PATH=/usr/local/go/bin:$$PATH && $(HUGO) server --buildDrafts --environment $(HUGO_ENV)
+	@export PATH=/usr/local/go/bin:$$PATH && $(HUGO) server --buildDrafts --environment $(HUGO_ENV) --baseURL "http://localhost:1313/"
 
 clean: ## Clean build artifacts
 	@echo "Cleaning build artifacts..."
