@@ -6,7 +6,7 @@ linkTitle: "Documentation"
 <div class="docs-hero">
   <p class="lead">API-driven infrastructure management for Kubernetes</p>
   <div class="mt-4">
-    <a class="btn btn-lg btn-primary me-3" href="/docs/getting-started/">Get Started →</a>
+    <a class="btn btn-lg btn-primary me-3" href="/website/docs/getting-started/">Get Started →</a>
     <a class="btn btn-lg btn-outline-secondary" href="https://github.com/firestoned">View on GitHub</a>
   </div>
 </div>
@@ -22,7 +22,7 @@ Get up and running in minutes:
 2. **Define your resource** - Create a JSON Schema for your API resource
 3. **Generate your API** - Create OpenAPI specs, CLIs, and client code automatically
 
-**[Follow the Firestone Guide →](/docs/firestone/)**
+**[Follow the Firestone Guide →](/website/docs/firestone/)**
 {{% /alert %}}
 
 ---
@@ -30,7 +30,7 @@ Get up and running in minutes:
 ## Core Components
 
 {{< cardpane >}}
-{{< card header="<strong>firestone</strong> (Core)" footer="[Learn more →](/docs/firestone/)" >}}
+{{< card header="<strong>firestone</strong> (Core)" footer="[Learn more →](/website/docs/firestone/)" >}}
 <div style="text-align: center; font-size: 3em; margin: 20px 0;">🔥</div>
 
 <strong>API Specification Generator</strong>
@@ -44,7 +44,7 @@ The heart of Firestoned. Generate OpenAPI, AsyncAPI specs, and CLI tools from JS
 - Code generation via openapi-generator
 {{< /card >}}
 
-{{< card header="<strong>firestone-lib</strong>" footer="[Learn more →](/docs/firestone/)" >}}
+{{< card header="<strong>firestone-lib</strong>" footer="[Learn more →](/website/docs/firestone/)" >}}
 <div style="text-align: center; font-size: 3em; margin: 20px 0;">📚</div>
 
 <strong>Shared Library</strong>
@@ -58,7 +58,7 @@ Core library powering firestone and forevd. Provides reusable components for spe
 - API automation
 {{< /card >}}
 
-{{< card header="<strong>bindy</strong>" footer="[Learn more →](/docs/bindy/)" >}}
+{{< card header="<strong>bindy</strong>" footer="[Learn more →](/website/docs/bindy/)" >}}
 <div style="text-align: center; font-size: 3em; margin: 20px 0;">🏗️</div>
 
 <strong>Kubernetes DNS Operator</strong>
@@ -74,7 +74,7 @@ Kubernetes-native BIND9 DNS management through CRDs. Demonstrates infrastructure
 {{< /cardpane >}}
 
 {{< cardpane >}}
-{{< card header="<strong>bindcar</strong>" footer="[Learn more →](/docs/bindcar/)" >}}
+{{< card header="<strong>bindcar</strong>" footer="[Learn more →](/website/docs/bindcar/)" >}}
 <div style="text-align: center; font-size: 3em; margin: 20px 0;">🚗</div>
 
 <strong>BIND9 REST API Sidecar</strong>
@@ -88,7 +88,7 @@ REST API for BIND9 zone management. Translates HTTP requests into RNDC commands 
 - Metrics and monitoring
 {{< /card >}}
 
-{{< card header="<strong>zonewarden</strong>" footer="[Learn more →](/docs/zonewarden/)" >}}
+{{< card header="<strong>zonewarden</strong>" footer="[Learn more →](/website/docs/zonewarden/)" >}}
 <div style="text-align: center; font-size: 3em; margin: 20px 0;">🛡️</div>
 
 <strong>Service-to-DNS Sync</strong>
@@ -145,7 +145,7 @@ graph TB
     style forevd fill:#333,color:#fff
 ```
 
-**[Getting Started Guide →](/docs/getting-started/)**
+**[Getting Started Guide →](/website/docs/getting-started/)**
 
 ---
 
@@ -178,13 +178,13 @@ Ready to build API-driven infrastructure? Choose your path:
   <div style="flex: 1; padding: 20px; border: 2px solid #ff6b35; border-radius: 8px; background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);">
     <h3>🚀 Complete Guide</h3>
     <p>New to Firestoned? Start here for a comprehensive walkthrough from installation to your first API.</p>
-    <p><strong><a href="/docs/getting-started/">Getting Started Guide →</a></strong></p>
+    <p><strong><a href="/website/docs/getting-started/">Getting Started Guide →</a></strong></p>
   </div>
 
   <div style="flex: 1; padding: 20px; border: 2px solid #ff6b35; border-radius: 8px;">
     <h3>📖 Component Docs</h3>
     <p>Jump directly to documentation for specific components:</p>
-    <p><strong><a href="/docs/firestone/">firestone</a> | <a href="/docs/bindy/">bindy</a> | <a href="/docs/bindcar/">bindcar</a></strong></p>
+    <p><strong><a href="/website/docs/firestone/">firestone</a> | <a href="/website/docs/bindy/">bindy</a> | <a href="/website/docs/bindcar/">bindcar</a></strong></p>
   </div>
 
   <div style="flex: 1; padding: 20px; border: 2px solid #ff6b35; border-radius: 8px;">
