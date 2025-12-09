@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'website/**'
+      - '**'
       - '.github/workflows/docs.yaml'
   workflow_dispatch:
 
@@ -43,22 +43,18 @@ jobs:
         with:
           node-version: "18"
           cache: "npm"
-          cache-dependency-path: website/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install Node.js dependencies
-        run: |
-          cd website
-          npm ci
+        run: npm ci
 
       - name: Build Hugo site
-        run: |
-          cd website
-          hugo --minify --environment production
+        run: hugo --minify --environment production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website/public
+          path: public
 
   deploy:
     needs: build
