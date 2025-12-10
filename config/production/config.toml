@@ -1,4 +1,5 @@
 # Production-specific settings
+baseURL = "https://firestoned.io/"
 [minify]
   disableCSS = false
   disableHTML = false
